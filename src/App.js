@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Invitatoin from "./component/invitation";
+import { useState } from "react";
+import Received from "./component/received";
+import Reject from "./component/reject";
 function App() {
+  const [response, setResponse] = useState("");
+  const handleCheck = (arg) => {
+    setResponse(arg);
+    console.log(response);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-screen bg-wite flex justify-center items-center ">
+      {response === "зөвшөөрөв" ? (
+        <Received />
+      ) : response === "татгалзав" ? (
+        <Reject />
+      ) : (
+        <Invitatoin handleCheck={handleCheck} />
+      )}
     </div>
   );
 }

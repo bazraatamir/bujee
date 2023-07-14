@@ -1,0 +1,10 @@
+ <p className=" font-garchig text-center w-[70%] h-[10%] align-middle italic mt-2 pl-9">
+        төв номын сангийн урд CU-тэй байрны 3 давхарт
+      </p>
+      <div className="w-[100%] flex justify-center gap-2">
+        <span className=" font-garchig inline-block text-[20px]">07</span>
+        <span className=" font-garchig inline-block text-[20px]">:</span>
+        <span className=" font-garchig inline-block text-[20px]">15</span>
+        <span className=" font-garchig inline-block text-[20px]">:</span>
+        <span className=" font-garchig inline-block text-[20px]">19:00</span>
+      </div>
